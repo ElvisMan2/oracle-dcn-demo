@@ -9,5 +9,4 @@ public class OracleDcnDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(OracleDcnDemoApplication.class, args);
     }
-
 }
