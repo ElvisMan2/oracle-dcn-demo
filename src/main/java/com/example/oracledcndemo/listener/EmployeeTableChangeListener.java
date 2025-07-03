@@ -8,7 +8,7 @@ public class EmployeeTableChangeListener implements DatabaseChangeListener {
 
     @Override
     public void onDatabaseChangeNotification(DatabaseChangeEvent event) {
-        System.out.println("Cambio detectado en la base de datos:");
+        System.out.println("++Cambio detectado en la base de datos++");
         System.out.println(event.toString());
     }
 }
