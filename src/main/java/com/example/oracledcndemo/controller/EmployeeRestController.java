@@ -1,5 +1,6 @@
 package com.example.oracledcndemo.controller;
 
+import com.example.oracledcndemo.model.request.EmployeeRequest;
 import com.example.oracledcndemo.model.response.EmployeeResponse;
 import com.example.oracledcndemo.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -16,9 +17,14 @@ public class EmployeeRestController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping
+    @GetMapping("/")
     public List<EmployeeResponse> getAllEmployees() {
         return employeeService.getAll();
+    }
+
+    @PostMapping("/")
+    public void createEmployee(@RequestBody EmployeeRequest employee) {
+        employeeService.create(employee);
     }
 
 }

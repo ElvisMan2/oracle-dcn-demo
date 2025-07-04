@@ -1,6 +1,7 @@
 package com.example.oracledcndemo.service;
 
 import com.example.oracledcndemo.mapper.EmployeeMapper;
+import com.example.oracledcndemo.model.request.EmployeeRequest;
 import com.example.oracledcndemo.model.response.EmployeeResponse;
 
 import lombok.RequiredArgsConstructor;
@@ -19,5 +20,10 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public List<EmployeeResponse> getAll() {
         return employeeMapper.getAll();
+    }
+
+    @Override
+    public void create(EmployeeRequest employee) {
+        employeeMapper.create(employee);
     }
 }

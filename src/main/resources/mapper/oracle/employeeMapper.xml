@@ -12,4 +12,9 @@
         FROM EMPLOYEES e
     </select>
 
+    <insert id="create" parameterType="EmployeeRequest">
+        INSERT INTO EMPLOYEES (ID, FIRST_NAME, LAST_NAME, DEPARTMENT_ID, SALARY, HIRED_DATE)
+        VALUES (#{id}, #{firstName}, #{lastName}, #{departmentId}, #{salary}, #{hiredDate})
+    </insert>
+
 </mapper>
